@@ -1,52 +1,38 @@
-# Express (Backend) Template
+# Frontend (Vue.js) Template
 
-The server part of this template provides a basic [ExpressJS](https://expressjs.com/) template, i.e., the basic infrastructure for an Express application.
+This is the readme explaining the template for the frontend code.
 
-Read more on the backend part in [server/README.md](server/README.md)
+## Connection to backend
 
-# Vue.js (Frontend) Template
-
-The client part of this template provides a basic [Vue.js](https://vuejs.org/) template, i.e., the basic infrastructure for a frontend SPA page.
-
-Read more on the frontend part [client/README.md](client/README.md)
-
-# Cloning the Repository
-
+The way we have implemented it here, the frontend is installed and deployed together with the backend.
+That is, dependencies for the frontend are handled in the same way as for the backend, and also installed via:
 ```bash
-# Without Gitlab Registration
-git clone https://gitlab.com/dit341/express-template.git
-
-# With Gitlab Registration
-git clone git@gitlab.com:YOUR_USERNAME/express-template.git
+npm install
 ```
 
-# Deployment
+In the same way, the following command starts the server, including your frontend code:
 
-Deployment instructions for Heroku are found in [DEPLOYMENT.md](DEPLOYMENT.md)
+```bash
+npm start
+```
 
-# Requirements
+## Packaging
 
-* [Git](https://git-scm.com/)
-* [Nodejs](https://nodejs.org/en/) (v10) with [NPM](https://www.npmjs.com/)
-* [MongoDB](https://www.mongodb.com/) (v4) must be running locally
-* Everything else is installed through npm
+We will use Vue single file components in this assignments. These are files that end on .vue and contain HTML, CSS, and JavaScript code. To build a Vue.js application, they first have to be packaged into regular files. This is done (in this template) using [Browserify](http://browserify.org/).
 
-# Getting updates from original repo
+We have modified the package.json file so that everytime you run ```npm install```, the packaging process is run as well.
+So if you have changed your frontend, simply re-run ```npm install``` before running ```npm start```.
 
-In Assignment A1, you should have created a fork from this repository (we will refer to it as the "original repo" from now on).
-Of course you can create another fork of the original repo, and in this way get all the updated contents.
-However, git also allows you to fetch contents from the original repo into your fork.
+## Users
 
-To do so, follow these instructions (A longer, more detailed version is found [here](https://digitaldrummerj.me/git-syncing-fork-with-original-repo/)):
+For this example, we have slightly modified the original backend template to include the MongoDB database and provide GET and DELETE operations for camels (originally we just returned static content).
+Essentially, we used the same camel model as in L4 and the GET and DELETE operations on that model.
 
+We have created the structure for two classes of users, ```owners``` (which can view and delete camels) and ```buyers``` (which, in this template, can't really do anything).
+The SPA for owners is served at ```/owner``` and the SPA for buyers at ```/buyer```.
+The buyer SPA is essentially empty, but the owner SPA contains both a basic bootstrap design and some Vue.js components. If you add camels to your database using the model defined above, you will see that camels are listed and can be deleted in the owner frontend.
 
-1. Just in case, make sure you have all important changes committed and pushed to your own repository.
-2. Add the original repository as a so-called upstream repo:  
-```git remote add upstream https://gitlab.com/dit341/express-template.git```
-3. Fetch all changes from the original repo:  
-  ```git fetch upstream```
-4. Merge the changes in the original repo with your local master branch:  
-```git merge upstream/master```  
-Note that this might cause conflicts that you have to resolve manually!
-5. Once you are done, you can push the merged repository to your own (remote) repository:  
-```git push origin master```
+## Viewing Vue Single Component Files in VSCode
+
+VSCode does not know the file ending ```.vue``` by default. Therefore, the single component files for Vue will not come with syntax highlighting.
+To enable syntax highlighting also for this kind of files, install the Vetur extension in VSCode.
