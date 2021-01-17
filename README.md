@@ -28,9 +28,17 @@ So if you have changed your frontend, simply re-run ```npm install``` before run
 For this example, we have slightly modified the original backend template to include the MongoDB database and provide GET and DELETE operations for camels (originally we just returned static content).
 Essentially, we used the same camel model as in L4 and the GET and DELETE operations on that model.
 
-We have created the structure for two classes of users, ```owners``` (which can view and delete camels) and ```buyers``` (which, in this template, can't really do anything).
+We have created the structure for two classes of users, ```owners``` (which can view and delete recipe object) and ```buyers``` (which, in this template, can't really do anything but checking and browsing recipes).
 The SPA for owners is served at ```/owner``` and the SPA for buyers at ```/buyer```.
 The buyer SPA is essentially empty, but the owner SPA contains both a basic bootstrap design and some Vue.js components. If you add camels to your database using the model defined above, you will see that camels are listed and can be deleted in the owner frontend.
+
+
+# Requirements
+
+* [Git](https://git-scm.com/)
+* [Nodejs](https://nodejs.org/en/) (v10) with [NPM](https://www.npmjs.com/)
+* [MongoDB](https://www.mongodb.com/) (v4) must be running locally
+* Everything else is installed through npm
 
 ## Viewing Vue Single Component Files in VSCode
 
