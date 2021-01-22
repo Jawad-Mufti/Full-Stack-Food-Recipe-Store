@@ -25,7 +25,7 @@ So if you have changed your frontend, simply re-run ```npm install``` before run
 
 ## Users
 
-For this example, we have slightly modified the original backend template to include the MongoDB database and provide GET and DELETE operations for camels (originally we just returned static content).
+For this example, we have slightly modified the original backend template to include the MongoDB database and provide GET, DELETE, Post, Edit operations for camels (originally we just returned static content).
 Essentially, we used the same camel model as in L4 and the GET and DELETE operations on that model.
 
 We have created the structure for two classes of users, ```owners``` (which can view and delete camels) and ```buyers``` (which, in this template, can't really do anything).
