@@ -12,3 +12,5 @@ router.get('/api', function(req, res) {
     res.json({"message": "Welcome to your DIT341 backend project!"});
 });
 
+// Insert routes below
+router.use("/admin/recipes", adminRecipeRoute);
