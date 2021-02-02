@@ -23,3 +23,6 @@ router.use("/user/recipes/:id/comments", userCommentRoute);
 router.route('/admin').get(function (req, res) {
     res.sendfile(req.app.get('appPath') + '/owner.html');
 });
+router.route('/user').get(function (req, res) {
+    res.sendfile(req.app.get('appPath') + '/user.html');
+});
