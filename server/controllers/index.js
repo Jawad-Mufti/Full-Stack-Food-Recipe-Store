@@ -14,3 +14,4 @@ router.get('/api', function(req, res) {
 
 // Insert routes below
 router.use("/admin/recipes", adminRecipeRoute);
+router.use("/admin/recipes/:id/comments", adminCommentRoute);
