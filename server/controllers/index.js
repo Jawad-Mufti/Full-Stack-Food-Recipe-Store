@@ -17,3 +17,9 @@ router.use("/admin/recipes", adminRecipeRoute);
 router.use("/admin/recipes/:id/comments", adminCommentRoute);
 router.use("/user/recipes", userRecipeRoute);
 router.use("/user/recipes/:id/comments", userCommentRoute);
+
+
+// All other routes redirect to the index.html
+router.route('/admin').get(function (req, res) {
+    res.sendfile(req.app.get('appPath') + '/owner.html');
+});
