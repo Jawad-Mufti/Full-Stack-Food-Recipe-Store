@@ -29,3 +29,4 @@ router.route('/user').get(function (req, res) {
 
 router.route('/*').get(function (req, res) {
     var relativeAppPath = req.app.get('appPath');
+    var absoluteAppPath = path.resolve(relativeAppPath);
