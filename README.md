@@ -18,7 +18,7 @@ npm start
 
 ## Packaging
 
-We will use Vue single file components in this assignments. These are files that end on .vue and contain HTML, CSS, and JavaScript code. To build a Vue.js application, they first have to be packaged into regular files. This is done (in this template) using [Browserify](http://browserify.org/).
+We will use Vue single file components . These are files that end on .vue and contain HTML, CSS, and JavaScript code. To build a Vue.js application, they first have to be packaged into regular files. This is done (in this template) using [Browserify](http://browserify.org/).
 
 We have modified the package.json file so that everytime you run ```npm install```, the packaging process is run as well.
 So if you have changed your frontend, simply re-run ```npm install``` before running ```npm start```.
