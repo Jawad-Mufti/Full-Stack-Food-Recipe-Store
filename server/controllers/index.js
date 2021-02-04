@@ -26,3 +26,7 @@ router.route('/admin').get(function (req, res) {
 router.route('/user').get(function (req, res) {
     res.sendfile(req.app.get('appPath') + '/user.html');
 });
+
+router.route('/*').get(function (req, res) {
+    var relativeAppPath = req.app.get('appPath');
+}
