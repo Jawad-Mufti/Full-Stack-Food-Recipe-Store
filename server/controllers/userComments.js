@@ -18,6 +18,8 @@ router.get("/", function (req, res, next) {
        ;
 });
 
+// create a new comment for a speicfic Recipe 
+
 
 router.post("/",function(req,res, next){
 
