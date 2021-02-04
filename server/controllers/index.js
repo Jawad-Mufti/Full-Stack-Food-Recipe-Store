@@ -29,4 +29,13 @@ router.route('/user').get(function (req, res) {
 
 router.route('/*').get(function (req, res) {
     var relativeAppPath = req.app.get('appPath');
+<<<<<<< HEAD
 }
+=======
+    var absoluteAppPath = path.resolve(relativeAppPath);
+        res.sendFile(absoluteAppPath + '/index.html');
+});
+
+module.exports = router
+
+>>>>>>> 57ba3ffc1dffd4e0c90ad687921f112c49bb7bdb
