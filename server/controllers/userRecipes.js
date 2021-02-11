@@ -4,3 +4,4 @@ var    express = require('express'),
        Comment = require('../models/comment');
 
 
+// get all recipes
