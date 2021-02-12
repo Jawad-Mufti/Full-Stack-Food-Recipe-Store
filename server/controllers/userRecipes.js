@@ -15,3 +15,11 @@ router.get("/", function (req, res, next) {
 
     });
 });
+
+// create a new recipe
+router.post("/", function (req, res, next) {
+    Recipe.create({
+
+        title: req.body.title,
+        image: req.body.image,
+        description: req.body.description
