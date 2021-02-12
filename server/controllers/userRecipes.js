@@ -23,3 +23,11 @@ router.post("/", function (req, res, next) {
         title: req.body.title,
         image: req.body.image,
         description: req.body.description
+    }, function (err, recipe) {
+        if (err) {
+            return next(err);
+        } else {
+            res.status(201).json(recipe);
+        }
+    });
+});
